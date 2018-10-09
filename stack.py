@@ -78,6 +78,5 @@ while len(arr_rev) > 0:
         print(ans)
         Stack2.pop()
 
-
+print("the ans is")
 print(max(ans))
-    
