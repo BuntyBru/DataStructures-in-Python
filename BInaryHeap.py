@@ -35,6 +35,7 @@ class BinaryHeap:
 				self.heapList[i]=self.heapList[mc]
 				self.heapList[mc]=temp
 			i = mc
+			
 
 
 	def delMin(self):
@@ -52,6 +53,9 @@ class BinaryHeap:
 		while i > 0:
 			self.percDown(i)
 			i = i-1
+
+	def getMin(self):
+		return self.heapList[1]
 	
 
 
@@ -59,11 +63,12 @@ bh = BinaryHeap()
 arr = [9,5,6,2,3]
 bh.buildHeap(arr)
 arr = bh.heapList
-print(arr)
 
+ans = BinaryHeap()
+arr2 = [12,4,5,3,8,7]
+ans.buildHeap(arr2)
+print(ans.heapList)
+print(ans.getMin())
+print(ans.delMin())
+print(ans.getMin())
 
-print(bh.delMin())
-print(bh.delMin())
-print(bh.delMin())
-print(bh.delMin())
-print(bh.delMin())
